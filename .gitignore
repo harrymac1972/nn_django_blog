@@ -1,0 +1,12 @@
+
+*.pyc
+venv/
+db.sqlite3
+/staticfiles/
+/media/
+.env
+local_settings.py
+.vscode/
+.idea/
+/logs/
+*.bak
