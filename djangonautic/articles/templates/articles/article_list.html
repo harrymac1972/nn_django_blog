@@ -1,14 +1,31 @@
 {% extends 'base_layout.html' %}
 
 {% block content %}
-    <h1>Article List</h1>
-    <div class="articles">
-        {% for article in articles %}
-            <div class="article">
-                <h2><a href="#">{{ article.title }}</a></h2>
-                <p>{{ article.snippet }}</p>
-                <p>{{ article.date }}</p>
-            </div>
-        {% endfor %}
+    <style>
+        h1 {
+            margin: 10%;
+            font-weight: bold;
+            border: 1px solid blue;
+        }
+        .article-body {
+            margin: 0 25%;
+            border: 1px solid green;
+        }
+        .article {
+            margin: 10% auto;
+            border: 1px solid red;
+        }
+    </style>
+    <div class="article-body">
+        <h1>Article List</h1>
+        <div class="articles">
+            {% for article in articles %}
+                <div class="article">
+                    <h2><a href="#">{{ article.title }}</a></h2>
+                    <p>{{ article.snippet }}</p>
+                    <p>{{ article.date }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
